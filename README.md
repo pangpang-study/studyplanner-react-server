@@ -2,6 +2,7 @@
 
 create-react-app을 기본 구조로하는 프로젝트
 
+
 ## 서버 실행
 
 In the project directory, you can run:
@@ -13,6 +14,7 @@ In the project directory, you can run:
 ### `2. yarn start`
 
 주소 [http://localhost:3000](http://localhost:3000) 에서 실행
+
 
 ## 기타 참고사항
 
