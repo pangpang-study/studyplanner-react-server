@@ -7,7 +7,8 @@ const Row = props => {
     display:flex;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    margin: ${props.marginTop}px ${props.marginLeft}px ${props.marginBottom}px ${props.marginRight}px;
+    gap: ${props.columnGap}px ${props.rowGap}px;
     `
 
     return (
@@ -17,6 +18,14 @@ const Row = props => {
     )
 }
 
-Row.defaultProps = {}
+Row.defaultProps = {
+    marginTop: 0,
+    marginLeft: 0,
+    marginRight: 0,
+    marginBottom: 0,
+
+    columnGap: 0,
+    rowGap: 0,
+}
 
 export default Row

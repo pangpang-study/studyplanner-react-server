@@ -4,8 +4,8 @@ import styled from 'styled-components'
 const ComponentBox = props => {
 
     const BasicBox = styled.div`
-    width:400px;
-    height:400px;
+    width:${props.width || 100}px;
+    height:${props.height || 100}px;
     background:gray;
     
     border-radius: 10px;
