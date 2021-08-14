@@ -1,5 +1,5 @@
 import React from 'react'
-import {BasicButton} from '../presentational'
+import {BasicButton, ComponentBox, Row} from '../presentational'
 
 const Login = () => {
     return (
@@ -10,6 +10,10 @@ const Login = () => {
                 <input placeholder={'PASSWORD'} type={'password'}></input>
                 <BasicButton message={'로그인'}></BasicButton>
             </div>
+
+            <Row>
+                <ComponentBox></ComponentBox>
+            </Row>
         </>
     )
 }
