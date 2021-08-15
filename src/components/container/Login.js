@@ -1,15 +1,23 @@
 import React from 'react'
-import {BasicButton} from '../presentational'
+import {BasicButton, ComponentBox, Row, BasicText, BasicInput} from '../presentational'
 
 const Login = () => {
     return (
         <>
-            <div>
-                <div>Welcome PangPang Study Planner!</div>
-                <input placeholder={'ID'}></input>
-                <input placeholder={'PASSWORD'} type={'password'}></input>
-                <BasicButton message={'로그인'}></BasicButton>
-            </div>
+
+            <Row>
+                <ComponentBox width={400} height={400}>
+
+                    <BasicText type={'title'} message={'Welcome PangPang Study Planner!'}/>
+                    <Row><BasicInput message={'ID'}/></Row>
+                    <Row><BasicInput message={'PASSWORD'} type={'password'}/></Row>
+                    <Row marginTop={15} rowGap={10}>
+                        <BasicButton message={'로그인'}></BasicButton>
+                        <BasicButton message={'회원가입'}></BasicButton>
+                    </Row>
+
+                </ComponentBox>
+            </Row>
         </>
     )
 }
