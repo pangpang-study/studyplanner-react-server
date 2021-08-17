@@ -1,0 +1,9 @@
+-D electron (마찬가지로 exe파일로 떨어뜨리기위해 devDependencies에 설치)
+foreman
+-D electron-builder (devDependencies에서만 동작)
+
+
+
+
+    "dist": "yarn run react-build && electron-builder ."  -->  블로그에 해당 명령을 아래와 같이 바꿔야함
+    "dist": "yarn run react-build && electron-builder"
