@@ -3,9 +3,11 @@ import styled from 'styled-components'
 
 const ComponentBox = props => {
 
+    const {width, height} = props
+
     const BasicBox = styled.div`
-    width:${props.width || 100}px;
-    height:${props.height || 100}px;
+    width:${width || 100}px;
+    height:${height || 100}px;
     background:gray;
     
     border-radius: 10px;
@@ -18,7 +20,5 @@ const ComponentBox = props => {
         </BasicBox>
     )
 }
-
-ComponentBox.defaultProps = {}
 
 export default ComponentBox

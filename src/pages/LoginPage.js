@@ -1,8 +1,8 @@
 import React from 'react';
 import {Login} from "../components/container";
 
-const LoginPage = () => {
-    return <Login></Login>
+const LoginPage = props => {
+    return <Login history={props.history}/>
 }
 
 export default LoginPage

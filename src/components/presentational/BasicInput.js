@@ -3,19 +3,19 @@ import styled from 'styled-components'
 
 const BasicInput = props => {
 
-    const message = props.message
+    const {message = 'default', onChange = value =>console.log('empty')} = props
 
     const LoginInput = styled.input`
-    width:150px;
-    height:20px;
-    border-radius: 10px;
+      width: 150px;
+      height: 20px;
+      border-radius: 10px;
     `
 
-    return <LoginInput placeholder={message}/>
-}
+    const thisOnChange = e => {
+        onChange(e.target.value)
+    }
 
-BasicInput.defaultProps = {
-    message: 'defaultMessage'
+    return <LoginInput placeholder={message} onChange={thisOnChange}/>
 }
 
 export default BasicInput

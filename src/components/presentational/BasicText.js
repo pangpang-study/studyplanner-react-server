@@ -1,15 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Title = styled.h3`
+  text-align: center;
+`
+const Content = styled.div`
+  text-align: center;
+`
+
 const BasicText = props => {
 
-    const message = props.message
-    const type = props.type
-
-    const Title = styled.h3`
-    `
-    const Content = styled.div`
-    `
+    const {message = 'default', type = 'content'} = props
 
     return (
         <>
@@ -19,11 +20,6 @@ const BasicText = props => {
             }
         </>
     )
-}
-
-BasicText.defaultProps = {
-    message: 'defaultMessage',
-    type:'content'
 }
 
 export default BasicText

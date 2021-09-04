@@ -1,21 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const LoginButton = styled.button`
+  border-radius: 10px;
+`
+
 const BasicButton = props => {
 
-    const message = props.message
+    const {message = 'default', onClick} = props
 
-    const LoginButton = styled.button`
-    border-radius: 10px;
-    `
 
     return (
-        <LoginButton>{message}</LoginButton>
+        <LoginButton onClick={onClick}>{message}</LoginButton>
     )
-}
-
-BasicButton.defaultProps = {
-    message: 'defaultMessage'
 }
 
 export default BasicButton

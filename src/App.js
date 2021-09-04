@@ -1,26 +1,16 @@
-import './App.css';
-import LoginPage from "./pages/LoginPage";
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {LoginPage, SignUpPage} from "./pages";
 
 function App() {
-  return (
-    <div className="App">
-      <LoginPage></LoginPage>
-      {/*<header className="App-header">*/}
-      {/*  <img src={logo} className="App-logo" alt="logo" />*/}
-      {/*  <p>*/}
-      {/*    Edit <code>src/App.js</code> and save to reload.*/}
-      {/*  </p>*/}
-      {/*  <a*/}
-      {/*    className="App-link"*/}
-      {/*    href="https://reactjs.org"*/}
-      {/*    target="_blank"*/}
-      {/*    rel="noopener noreferrer"*/}
-      {/*  >*/}
-      {/*    Learn React*/}
-      {/*  </a>*/}
-      {/*</header>*/}
-    </div>
-  );
+    return (
+        <Router>
+            <Switch>
+                <Route exact path={'/'} component={LoginPage}/>
+                <Route path={'/signup'} component={SignUpPage}/>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
